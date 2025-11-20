@@ -1,0 +1,1052 @@
+<!doctype doctype>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prince Tyre - Royal Quality Retreaded Tyres</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #1a1a2e;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 32, 66, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .logo span {
+            color: #ffffff;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #d4af37;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        #home {
+            min-height: 100%;
+            background: linear-gradient(135deg, #0f2042 0%, #1a3a6b 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 5% 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><circle cx="100" cy="100" r="3" fill="%23d4af37" opacity="0.3"/><circle cx="300" cy="200" r="2" fill="%23d4af37" opacity="0.2"/><circle cx="500" cy="150" r="3" fill="%23d4af37" opacity="0.3"/><circle cx="700" cy="250" r="2" fill="%23d4af37" opacity="0.2"/><circle cx="900" cy="100" r="3" fill="%23d4af37" opacity="0.3"/><circle cx="1100" cy="200" r="2" fill="%23d4af37" opacity="0.2"/></svg>') repeat;
+            opacity: 0.1;
+        }
+        
+        .hero-content {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-text h1 span {
+            color: #d4af37;
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #d4af37;
+            color: #0f2042;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: #c29d2e;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .tire-illustration {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+        
+        /* About Section */
+        #about {
+            padding: 6rem 5%;
+            background: #f8f9fa;
+        }
+        
+        .about-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0f2042;
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 4rem;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .about-image {
+            background: linear-gradient(135deg, #0f2042 0%, #1a3a6b 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .process-icon {
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid #d4af37;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.3rem;
+            color: #0f2042;
+            margin-bottom: 0.8rem;
+        }
+        
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Products Section */
+        #products {
+            padding: 6rem 5%;
+            background: #ffffff;
+        }
+        
+        .products-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .product-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-image {
+            height: 250px;
+            background: linear-gradient(135deg, #0f2042 0%, #1a3a6b 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-image svg {
+            width: 70%;
+            height: 70%;
+        }
+        
+        .product-info {
+            padding: 2rem;
+        }
+        
+        .product-info h3 {
+            font-size: 1.5rem;
+            color: #0f2042;
+            margin-bottom: 0.8rem;
+        }
+        
+        .product-info p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .product-size {
+            display: inline-block;
+            background: #d4af37;
+            color: #0f2042;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        /* Contact Section */
+        #contact {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #0f2042 0%, #1a3a6b 100%);
+        }
+        
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        #contact .section-title {
+            color: #ffffff;
+        }
+        
+        #contact .section-subtitle {
+            color: #e0e0e0;
+        }
+        
+        .contact-form {
+            background: #ffffff;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #0f2042;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            background: #d4af37;
+            color: #0f2042;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .submit-button:hover {
+            background: #c29d2e;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .form-message {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            display: none;
+        }
+        
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0a1628;
+            color: #ffffff;
+            padding: 3rem 5% 1.5rem;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-brand h3 {
+            font-size: 1.8rem;
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-brand p {
+            color: #b0b0b0;
+            line-height: 1.8;
+        }
+        
+        .footer-links h4 {
+            color: #d4af37;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links ul li a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links ul li a:hover {
+            color: #d4af37;
+        }
+        
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #1a3a6b;
+            color: #808080;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                flex-direction: column;
+                background: rgba(15, 32, 66, 0.98);
+                width: 100%;
+                padding: 2rem;
+                gap: 1.5rem;
+                transition: left 0.3s ease;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-text p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <nav>
+   <div class="nav-container">
+    <div class="logo">
+     Prince <span>Tyre</span>
+    </div><button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+    <ul class="nav-links">
+     <li><a href="#home">Home</a></li>
+     <li><a href="#about">About Us</a></li>
+     <li><a href="#products">Products</a></li>
+     <li><a href="#contact">Contact</a></li>
+    </ul>
+   </div>
+  </nav>
+  <main>
+   <section id="home">
+    <div class="hero-content">
+     <div class="hero-text">
+      <h1 id="hero-headline">Prince Tyre: Royal Quality in <span>Retreaded Giants</span></h1>
+      <p id="hero-subheadline">Expertly resoling commercial, agricultural, and industrial tyres like the 12-04-28 and beyond. Sustainable quality. Unbeatable value.</p><a href="#about" class="cta-button" id="hero-cta">View Our Process</a>
+     </div>
+     <div class="hero-image">
+      <svg class="tire-illustration" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><circle cx="200" cy="200" r="180" fill="#1a1a2e" stroke="#d4af37" stroke-width="4" /> <circle cx="200" cy="200" r="160" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.5" /> <circle cx="200" cy="200" r="140" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.3" /> <circle cx="200" cy="200" r="80" fill="#0f2042" stroke="#d4af37" stroke-width="3" /> <g transform="translate(200, 200)">
+        <line x1="0" y1="-140" x2="0" y2="-80" stroke="#d4af37" stroke-width="3" />
+        <line x1="99" y1="-99" x2="57" y2="-57" stroke="#d4af37" stroke-width="3" />
+        <line x1="140" y1="0" x2="80" y2="0" stroke="#d4af37" stroke-width="3" />
+        <line x1="99" y1="99" x2="57" y2="57" stroke="#d4af37" stroke-width="3" />
+        <line x1="0" y1="140" x2="0" y2="80" stroke="#d4af37" stroke-width="3" />
+        <line x1="-99" y1="99" x2="-57" y2="57" stroke="#d4af37" stroke-width="3" />
+        <line x1="-140" y1="0" x2="-80" y2="0" stroke="#d4af37" stroke-width="3" />
+        <line x1="-99" y1="-99" x2="-57" y2="-57" stroke="#d4af37" stroke-width="3" />
+       </g> <path d="M 200 20 Q 250 50 250 100 T 200 180" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.3" /> <path d="M 380 200 Q 350 250 300 250 T 220 200" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.3" />
+      </svg>
+     </div>
+    </div>
+   </section>
+   <section id="about">
+    <div class="about-container">
+     <h2 class="section-title" id="about-title">The Prince Tyre Advantage</h2>
+     <p class="section-subtitle">Excellence in every resolution</p>
+     <div class="about-content">
+      <div class="about-text">
+       <p id="about-description">At Prince Tyre, we specialize in the art and science of tyre retreading, offering commercial, agricultural, and industrial clients a sustainable and cost-effective solution without compromising on quality. Our state-of-the-art facility is equipped to handle the largest tyres, including the challenging 12-04-28 size and beyond.</p>
+       <p>Our expert technicians employ rigorous quality control measures at every stage of the resoling process, ensuring each tyre meets the highest standards of safety and performance. We combine traditional craftsmanship with modern technology to deliver tyres that perform like new, backed by our royal commitment to excellence.</p>
+      </div>
+      <div class="about-image">
+       <svg class="process-icon" viewbox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="100" width="100" height="150" rx="10" fill="#d4af37" opacity="0.2" /> <rect x="50" y="100" width="100" height="150" rx="10" fill="none" stroke="#d4af37" stroke-width="3" /> <circle cx="100" cy="175" r="40" fill="none" stroke="#ffffff" stroke-width="3" /> <path d="M 100 140 L 100 210 M 65 175 L 135 175" stroke="#ffffff" stroke-width="3" /> <rect x="250" y="100" width="100" height="150" rx="10" fill="#d4af37" opacity="0.2" /> <rect x="250" y="100" width="100" height="150" rx="10" fill="none" stroke="#d4af37" stroke-width="3" /> <circle cx="300" cy="175" r="40" fill="none" stroke="#ffffff" stroke-width="3" /> <path d="M 280 165 L 295 180 L 320 155" stroke="#ffffff" stroke-width="3" fill="none" /> <path d="M 160 175 L 240 175" stroke="#d4af37" stroke-width="3" marker-end="url(#arrowhead)" /> <defs>
+         <marker id="arrowhead" markerwidth="10" markerheight="10" refx="9" refy="3" orient="auto">
+          <polygon points="0 0, 10 3, 0 6" fill="#d4af37" />
+         </marker>
+        </defs> <text x="100" y="40" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="600">
+         Inspection
+        </text> <text x="300" y="40" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="600">
+         Quality Assured
+        </text>
+       </svg>
+      </div>
+     </div>
+     <div class="features-grid">
+      <div class="feature-card">
+       <svg class="feature-icon" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="28" fill="#d4af37" opacity="0.2" /> <path d="M 32 10 L 38 22 L 52 24 L 42 34 L 44 48 L 32 42 L 20 48 L 22 34 L 12 24 L 26 22 Z" fill="#d4af37" /> <text x="32" y="38" text-anchor="middle" fill="#0f2042" font-size="20" font-weight="700">
+         $
+        </text>
+       </svg>
+       <h3>Cost Savings</h3>
+       <p>Save up to 50% compared to new tire costs while maintaining premium performance standards.</p>
+      </div>
+      <div class="feature-card">
+       <svg class="feature-icon" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="28" fill="#d4af37" opacity="0.2" /> <path d="M 32 8 Q 40 16 40 28 Q 40 36 32 44 Q 24 36 24 28 Q 24 16 32 8 Z" fill="none" stroke="#d4af37" stroke-width="3" /> <path d="M 32 20 L 32 36 M 24 28 L 40 28" stroke="#d4af37" stroke-width="2" /> <circle cx="32" cy="50" r="6" fill="#d4af37" />
+       </svg>
+       <h3>Eco-Friendly</h3>
+       <p>Reduce environmental impact by extending tyre life and minimizing waste in landfills.</p>
+      </div>
+      <div class="feature-card">
+       <svg class="feature-icon" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="28" fill="#d4af37" opacity="0.2" /> <rect x="18" y="20" width="28" height="24" rx="2" fill="none" stroke="#d4af37" stroke-width="3" /> <circle cx="24" cy="32" r="4" fill="#d4af37" /> <circle cx="40" cy="32" r="4" fill="#d4af37" /> <path d="M 24 44 L 40 44" stroke="#d4af37" stroke-width="3" />
+       </svg>
+       <h3>Fleet Reliability</h3>
+       <p>Dependable performance for commercial fleets with consistent quality across all retreaded tyres.</p>
+      </div>
+      <div class="feature-card">
+       <svg class="feature-icon" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="28" fill="#d4af37" opacity="0.2" /> <rect x="20" y="16" width="24" height="32" rx="2" fill="none" stroke="#d4af37" stroke-width="3" /> <line x1="26" y1="24" x2="38" y2="24" stroke="#d4af37" stroke-width="2" /> <line x1="26" y1="32" x2="38" y2="32" stroke="#d4af37" stroke-width="2" /> <line x1="26" y1="40" x2="34" y2="40" stroke="#d4af37" stroke-width="2" />
+       </svg>
+       <h3>Specialized Equipment</h3>
+       <p>Advanced machinery capable of handling the largest commercial and agricultural tyre sizes.</p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="products">
+    <div class="products-container">
+     <h2 class="section-title" id="products-title">Specializing in Large Commercial Tyres</h2>
+     <p class="section-subtitle">Premium retreading for your heavy-duty needs</p>
+     <div class="products-grid">
+      <div class="product-card">
+       <div class="product-image">
+        <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="85" fill="none" stroke="#d4af37" stroke-width="4" /> <circle cx="100" cy="100" r="70" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.5" /> <circle cx="100" cy="100" r="40" fill="#d4af37" opacity="0.3" /> <path d="M 100 20 L 100 60 M 100 140 L 100 180 M 20 100 L 60 100 M 140 100 L 180 100" stroke="#d4af37" stroke-width="3" />
+        </svg>
+       </div>
+       <div class="product-info">
+        <h3>Agricultural Tyres</h3>
+        <p>Specialized retreading for farm equipment and tractors. Built to handle tough terrain and heavy loads.</p><span class="product-size">12-04-28</span>
+       </div>
+      </div>
+      <div class="product-card">
+       <div class="product-image">
+        <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="85" fill="none" stroke="#d4af37" stroke-width="4" /> <circle cx="100" cy="100" r="70" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.5" /> <circle cx="100" cy="100" r="40" fill="#d4af37" opacity="0.3" /> <g transform="translate(100, 100) rotate(45)">
+          <line x1="0" y1="-60" x2="0" y2="-85" stroke="#d4af37" stroke-width="3" />
+          <line x1="0" y1="60" x2="0" y2="85" stroke="#d4af37" stroke-width="3" />
+          <line x1="-60" y1="0" x2="-85" y2="0" stroke="#d4af37" stroke-width="3" />
+          <line x1="60" y1="0" x2="85" y2="0" stroke="#d4af37" stroke-width="3" />
+         </g>
+        </svg>
+       </div>
+       <div class="product-info">
+        <h3>Commercial Truck Tyres</h3>
+        <p>Heavy-duty retreading for long-haul trucks and delivery vehicles. Maximum mileage and reliability.</p><span class="product-size">10.00-20</span>
+       </div>
+      </div>
+      <div class="product-card">
+       <div class="product-image">
+        <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="85" fill="none" stroke="#d4af37" stroke-width="4" /> <circle cx="100" cy="100" r="70" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.5" /> <circle cx="100" cy="100" r="40" fill="#d4af37" opacity="0.3" /> <path d="M 100 20 Q 130 50 130 100 T 100 180 Q 70 150 70 100 T 100 20" fill="none" stroke="#d4af37" stroke-width="2" />
+        </svg>
+       </div>
+       <div class="product-info">
+        <h3>Industrial Equipment</h3>
+        <p>Custom retreading solutions for construction and mining equipment. Engineered for extreme conditions.</p><span class="product-size">16-00-25</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="contact">
+    <div class="contact-container">
+     <h2 class="section-title" id="contact-title">Inquire Now for a Quote</h2>
+     <p class="section-subtitle">Get in touch with our team of experts</p>
+     <form class="contact-form" id="contactForm">
+      <div class="form-row">
+       <div class="form-group"><label for="name">Name *</label> <input type="text" id="name" name="name" required>
+       </div>
+       <div class="form-group"><label for="company">Company</label> <input type="text" id="company" name="company">
+       </div>
+      </div>
+      <div class="form-row">
+       <div class="form-group"><label for="email">Email *</label> <input type="email" id="email" name="email" required>
+       </div>
+       <div class="form-group"><label for="phone">Phone Number *</label> <input type="tel" id="phone" name="phone" required>
+       </div>
+      </div>
+      <div class="form-group"><label for="message">Message / Tyre Size Inquiry *</label> <textarea id="message" name="message" required placeholder="Please describe your tire needs, including sizes and quantities..."></textarea>
+      </div><button type="submit" class="submit-button">Send Inquiry</button>
+      <div class="form-message" id="formMessage"></div>
+     </form>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <div class="footer-content">
+    <div class="footer-brand">
+     <h3>Prince Tyre</h3>
+     <p>Your trusted partner in premium tyre retreading services. Delivering royal quality and sustainable solutions for commercial, agricultural, and industrial applications.</p>
+     <h3>Address</h3>
+     <p>Kharsia chowk Ambikapur (C.G)</p>
+    </div>
+    <div class="footer-links">
+     <h4>Quick Links</h4>
+     <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+     </ul>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p id="footer-text">© 2026 Prince Tyre. All rights reserved. Royal Quality in Retreaded Giants.</p>
+   </div>
+  </footer>
+  <script>
+        const defaultConfig = {
+            background_color: '#0f2042',
+            secondary_surface_color: '#ffffff',
+            text_color: '#1a1a2e',
+            primary_action_color: '#d4af37',
+            secondary_action_color: '#1a3a6b',
+            font_family: 'Poppins',
+            font_size: 16,
+            hero_headline: 'Prince Tyre: Royal Quality in Retreaded Giants',
+            hero_subheadline: 'Expertly resoling commercial, agricultural, and industrial tyres like the 12-04-28 and beyond. Sustainable quality. Unbeatable value.',
+            hero_cta_text: 'View Our Process',
+            about_title: 'The Prince Tyre Advantage',
+            about_description: 'At Prince Tyre, we specialize in the art and science of tyre retreading, offering commercial, agricultural, and industrial clients a sustainable and cost-effective solution without compromising on quality. Our state-of-the-art facility is equipped to handle the largest tires, including the challenging 12-04-28 size and beyond.',
+            products_title: 'Specializing in Large Commercial Tyres',
+            contact_title: 'Inquire Now for a Quote',
+            footer_text: '© 2026 Prince Tyre. All rights reserved. Royal Quality in Retreaded Giants.'
+        };
+
+        async function onConfigChange(config) {
+            const customFont = config.font_family || defaultConfig.font_family;
+            const baseSize = config.font_size || defaultConfig.font_size;
+            const baseFontStack = 'sans-serif';
+            const fontFamily = `${customFont}, ${baseFontStack}`;
+
+            document.body.style.fontFamily = fontFamily;
+            document.body.style.fontSize = `${baseSize}px`;
+
+            const backgroundColor = config.background_color || defaultConfig.background_color;
+            const surfaceColor = config.secondary_surface_color || defaultConfig.secondary_surface_color;
+            const textColor = config.text_color || defaultConfig.text_color;
+            const primaryActionColor = config.primary_action_color || defaultConfig.primary_action_color;
+            const secondaryActionColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+
+            const heroSection = document.getElementById('home');
+            if (heroSection) {
+                heroSection.style.background = `linear-gradient(135deg, ${backgroundColor} 0%, ${secondaryActionColor} 100%)`;
+            }
+
+            const nav = document.querySelector('nav');
+            if (nav) {
+                nav.style.background = `rgba(15, 32, 66, 0.95)`;
+            }
+
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+                aboutSection.style.background = surfaceColor;
+            }
+
+            const productsSection = document.getElementById('products');
+            if (productsSection) {
+                productsSection.style.background = surfaceColor;
+            }
+
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                contactSection.style.background = `linear-gradient(135deg, ${backgroundColor} 0%, ${secondaryActionColor} 100%)`;
+            }
+
+            const sectionTitles = document.querySelectorAll('.section-title');
+            sectionTitles.forEach(title => {
+                if (title.closest('#contact')) {
+                    title.style.color = surfaceColor;
+                } else {
+                    title.style.color = backgroundColor;
+                }
+                title.style.fontSize = `${baseSize * 1.75}px`;
+            });
+
+            const ctaButtons = document.querySelectorAll('.cta-button, .submit-button');
+            ctaButtons.forEach(button => {
+                button.style.background = primaryActionColor;
+                button.style.color = backgroundColor;
+                button.style.fontSize = `${baseSize * 1.1}px`;
+            });
+
+            const productSizes = document.querySelectorAll('.product-size');
+            productSizes.forEach(size => {
+                size.style.background = primaryActionColor;
+                size.style.color = backgroundColor;
+            });
+
+            const featureCards = document.querySelectorAll('.feature-card');
+            featureCards.forEach(card => {
+                card.style.borderTopColor = primaryActionColor;
+                card.style.background = surfaceColor;
+            });
+
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach(card => {
+                card.style.background = surfaceColor;
+            });
+
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.style.fontSize = `${baseSize * 0.95}px`;
+            });
+
+            document.body.style.color = textColor;
+
+            const heroHeadline = document.getElementById('hero-headline');
+            if (heroHeadline) {
+                heroHeadline.textContent = config.hero_headline || defaultConfig.hero_headline;
+                heroHeadline.style.fontSize = `${baseSize * 2.2}px`;
+            }
+
+            const heroSubheadline = document.getElementById('hero-subheadline');
+            if (heroSubheadline) {
+                heroSubheadline.textContent = config.hero_subheadline || defaultConfig.hero_subheadline;
+                heroSubheadline.style.fontSize = `${baseSize * 1.2}px`;
+            }
+
+            const heroCta = document.getElementById('hero-cta');
+            if (heroCta) {
+                heroCta.textContent = config.hero_cta_text || defaultConfig.hero_cta_text;
+            }
+
+            const aboutTitle = document.getElementById('about-title');
+            if (aboutTitle) {
+                aboutTitle.textContent = config.about_title || defaultConfig.about_title;
+            }
+
+            const aboutDescription = document.getElementById('about-description');
+            if (aboutDescription) {
+                aboutDescription.textContent = config.about_description || defaultConfig.about_description;
+                aboutDescription.style.fontSize = `${baseSize * 1.1}px`;
+            }
+
+            const productsTitle = document.getElementById('products-title');
+            if (productsTitle) {
+                productsTitle.textContent = config.products_title || defaultConfig.products_title;
+            }
+
+            const contactTitle = document.getElementById('contact-title');
+            if (contactTitle) {
+                contactTitle.textContent = config.contact_title || defaultConfig.contact_title;
+            }
+
+            const footerText = document.getElementById('footer-text');
+            if (footerText) {
+                footerText.textContent = config.footer_text || defaultConfig.footer_text;
+            }
+        }
+
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig: defaultConfig,
+                onConfigChange: onConfigChange,
+                mapToCapabilities: (config) => ({
+                    recolorables: [
+                        {
+                            get: () => config.background_color || defaultConfig.background_color,
+                            set: (value) => {
+                                config.background_color = value;
+                                window.elementSdk.setConfig({ background_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.secondary_surface_color || defaultConfig.secondary_surface_color,
+                            set: (value) => {
+                                config.secondary_surface_color = value;
+                                window.elementSdk.setConfig({ secondary_surface_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.text_color || defaultConfig.text_color,
+                            set: (value) => {
+                                config.text_color = value;
+                                window.elementSdk.setConfig({ text_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+                            set: (value) => {
+                                config.primary_action_color = value;
+                                window.elementSdk.setConfig({ primary_action_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+                            set: (value) => {
+                                config.secondary_action_color = value;
+                                window.elementSdk.setConfig({ secondary_action_color: value });
+                            }
+                        }
+                    ],
+                    borderables: [],
+                    fontEditable: {
+                        get: () => config.font_family || defaultConfig.font_family,
+                        set: (value) => {
+                            config.font_family = value;
+                            window.elementSdk.setConfig({ font_family: value });
+                        }
+                    },
+                    fontSizeable: {
+                        get: () => config.font_size || defaultConfig.font_size,
+                        set: (value) => {
+                            config.font_size = value;
+                            window.elementSdk.setConfig({ font_size: value });
+                        }
+                    }
+                }),
+                mapToEditPanelValues: (config) => new Map([
+                    ['hero_headline', config.hero_headline || defaultConfig.hero_headline],
+                    ['hero_subheadline', config.hero_subheadline || defaultConfig.hero_subheadline],
+                    ['hero_cta_text', config.hero_cta_text || defaultConfig.hero_cta_text],
+                    ['about_title', config.about_title || defaultConfig.about_title],
+                    ['about_description', config.about_description || defaultConfig.about_description],
+                    ['products_title', config.products_title || defaultConfig.products_title],
+                    ['contact_title', config.contact_title || defaultConfig.contact_title],
+                    ['footer_text', config.footer_text || defaultConfig.footer_text]
+                ])
+            });
+        }
+
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !phone || !message) {
+                showMessage('Please fill in all required fields.', 'error');
+                return;
+            }
+
+            if (!isValidEmail(email)) {
+                showMessage('Please enter a valid email address.', 'error');
+                return;
+            }
+
+            if (!isValidPhone(phone)) {
+                showMessage('Please enter a valid phone number.', 'error');
+                return;
+            }
+
+            showMessage('Thank you for your inquiry! We will contact you soon.', 'success');
+            contactForm.reset();
+        });
+
+        function showMessage(text, type) {
+            formMessage.textContent = text;
+            formMessage.className = `form-message ${type}`;
+            formMessage.style.display = 'block';
+
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function isValidPhone(phone) {
+            const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+            return phoneRegex.test(phone) && phone.replace(/\D/g, '').length >= 10;
+        }
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a1994e6e6808ee8',t:'MTc2MzY1ODg0NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
